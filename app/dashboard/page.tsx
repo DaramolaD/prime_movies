@@ -42,7 +42,7 @@ const Dashboard = () => {
   const deleteChange = (e:any) =>{
     e.preventDefault()
     localStorage.setItem("user_data", JSON.stringify({}))
-    setDetails("");
+    setDetails({ username: "", email: "" });
   }
 
   useEffect(() => {
