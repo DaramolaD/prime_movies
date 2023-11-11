@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Signin from "../signin/page";
 import Signup from "../signup/page";
 import './page.css'
+import { useRouter } from "next/router";
 
 
 interface UserDetails {
@@ -14,6 +15,7 @@ interface UserDetails {
 const Dashboard = () => {
   const [signbtn, setSignbtn] = useState(true)
   const [details, setDetails] = useState<UserDetails>({ username: "", email: "" })
+  const router = useRouter()
   const getUser = () => {
     const userInfo = localStorage.getItem("user_data")
     if (userInfo) {
@@ -43,6 +45,7 @@ const Dashboard = () => {
     e.preventDefault()
     localStorage.setItem("user_data", JSON.stringify({}))
     setDetails({ username: "", email: "" });
+    router.push("/");
   }
 
   useEffect(() => {
