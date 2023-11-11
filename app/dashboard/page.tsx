@@ -18,7 +18,9 @@ const Dashboard = () => {
     const userInfo = localStorage.getItem("user_data")
     if (userInfo) {
       const userData = JSON.parse(userInfo)
-      setDetails(userData)
+      setDetails((prev) => {
+        return { ...prev, userData };
+      });
     } else {
       return []
     }
