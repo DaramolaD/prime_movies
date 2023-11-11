@@ -18,9 +18,7 @@ const Dashboard = () => {
     const userInfo = localStorage.getItem("user_data")
     if (userInfo) {
       const userData = JSON.parse(userInfo)
-      setDetails((prev) => {
-        return { ...prev, userData };
-      });
+      setDetails(userData);
     } else {
       return []
     }
@@ -48,9 +46,7 @@ const Dashboard = () => {
   }
 
   useEffect(() => {
-    return () => {
-      getUser()
-    };
+    getUser(); 
   }, []);
   
 
