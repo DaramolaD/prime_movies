@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Signin from "../signin/page";
 import Signup from "../signup/page";
 import './page.css'
-import { useRouter } from "next/router";
+import { useRouter } from 'next/navigation';
 
 
 interface UserDetails {
