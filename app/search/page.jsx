@@ -25,7 +25,7 @@ export default function Page() {
     })();
 
     return () => controller.abort();
-  }, [searchQuery]);
+  }, [searchQuery,mediaType]);
 
   return (
     <div className="search__page">
