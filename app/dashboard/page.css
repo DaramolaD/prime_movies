@@ -1,0 +1,50 @@
+.dashboard {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.dashboard h3 {
+    font-size: 18px;
+}
+.button {
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+.btnCont {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.detials {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.detials .h2 {
+    text-transform: capitalize;
+}
+.userInfo span {
+    font-style: italic;
+}
+.formCont {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.formCont input {
+    padding: 10px;
+}
+.button {
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}

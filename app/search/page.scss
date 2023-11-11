@@ -1,0 +1,75 @@
+@import "../../app/variables.scss";
+
+.search__page {
+    height: 100vh;
+    margin-top: 50px;
+    padding-inline: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .pageTitle {
+        font-size: 2rem;
+    }
+    .search {
+        margin: 1rem 0.5rem;
+        width: 100%;
+        max-width: 1300px;
+
+        .input__query {
+            width: 100%;
+            background: #2c2c2c;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            color: white;
+            box-shadow: 2px 2px 4px rgb(0 0 0 / 85%);
+            font-size: 1.2rem;
+
+            &:focus {
+                outline: none;
+                border-color: $primaryColor;
+            }
+        }
+    }
+
+    .gridCardContainer{
+        margin-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px 20px;
+    }
+
+    .query{
+        color: $primaryColor;
+        text-align: center;
+        margin: 1.5rem;
+    }
+
+    .no__result{
+        text-align: center;
+        margin-top: 35vh;
+        font-size: 1.2rem;
+    }
+
+    .loader{
+        margin: 4rem auto ;
+    }
+
+    @media screen and (max-width: 768px) {
+        .search {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin: 0.5rem 0.5rem;
+
+            .input__query {
+                grid-column: span 2;
+            }
+
+            .input__query,
+        select {
+            font-size: 1rem;
+        }
+        }        
+    }
+}

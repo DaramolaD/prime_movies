@@ -1,0 +1,104 @@
+@import "../../app/variables.scss";
+
+nav {
+    background-color: darken($backgroundColor, 2.5%);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: #000 2px -2px 4px;
+    z-index: 2;
+    gap:5px;
+
+    .logo {
+        text-align: center;
+
+        p {
+            font-size: 1.35rem;
+            color: #fff;
+        }
+    }
+
+    .linksContainer {
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: space-around;
+        filter: drop-shadow(2px 2px 2px black);
+        transition: all 0.3s ease-in-out;
+
+        a {
+            font-size: 1.2rem;
+            padding: 0.25rem 0.75rem;
+            color: #c4c4c4;
+            display: flex;
+            align-items: center;
+
+            &:last-child {
+                margin-top: auto;
+            }
+
+            .link__icon {
+                fill: $primaryColor;
+                font-size: 1.4rem;
+            }
+
+            .link__title {
+                padding-left: 0.75rem;
+                font-size: 16px;
+            }
+
+            &:hover {
+                color: #e7e7e7;
+            }
+
+            &.active {
+                fill: $primaryColor;
+                transform: scale(1.05);
+                color: #fff;
+
+                .link__icon {
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+
+        flex-direction: row;
+        // padding: 0;
+
+        .logo p {
+            font-size: 1rem;
+        }
+
+        .linksContainer {
+            font-size: 1.4rem;
+            flex-direction: row;
+            margin-top: 0;
+            align-items: center;
+
+            a {
+                border: none;
+                margin-bottom: 0;
+                height: 95%;
+                align-items: center;
+
+                &:last-child {
+                    display: none;
+                }
+
+                &.active {
+                    border-bottom: 2px solid $primaryColor;
+                }
+
+                .link__title {
+                    display: none;
+                }
+                .link__icon {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
