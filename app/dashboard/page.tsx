@@ -4,10 +4,16 @@ import Signin from "../signin/page";
 import Signup from "../signup/page";
 import './page.css'
 
+
+interface UserDetails {
+  username: string;
+  email: string;
+}
+
 // export default async function Dashboard() {
 const Dashboard = () => {
   const [signbtn, setSignbtn] = useState(true)
-  const [details, setDetails] = useState({})
+  const [details, setDetails] = useState<UserDetails>({ username: "", email: "" })
   const getUser = () => {
     const userInfo = localStorage.getItem("user_data")
     if (userInfo) {
