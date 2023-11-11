@@ -70,7 +70,7 @@ const Dashboard = () => {
           <form className="formCont" onSubmit={onsubmitChange}> 
             <input name="username" value={details.username}type="username" placeholder='Username...' onChange={userDetailChange} />
             <input name="email" value={details.email}type="email" placeholder='Email...' onChange={userDetailChange} />
-            <button type="submit">Update</button>
+            <button type="submit" className="button">Update</button>
           </form>
         </div> : ""
       }

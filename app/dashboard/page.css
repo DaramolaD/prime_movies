@@ -38,6 +38,8 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .formCont input {
     padding: 10px;
