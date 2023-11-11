@@ -50,7 +50,7 @@ export default function Nav() {
           </Link>
         ))}
 
-        <a href="https://github.com/daramolad/prime_movies_task_test" className="source">
+        <a href="https://github.com/DaramolaD/prime_movies" className="source">
           <span className="link__icon">
             <RiGithubFill />
           </span>

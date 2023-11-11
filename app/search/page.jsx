@@ -5,7 +5,7 @@ import Loader from '../../components/Loader';
 import Card from '../../components/Card';
 import styles from './page.scss';
 
-export default function page() {
+export default function Page() {
   const [mediaType, setMediaType] = useState('movie');
   const [searchQuery, setSearchQuery] = useState('');
 
